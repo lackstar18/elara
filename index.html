@@ -13,12 +13,12 @@ header{display:flex;justify-content:space-between;align-items:center;padding:18p
 .lang{display:flex;gap:6px}.lang button{font:inherit;font-size:.85rem;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}.lang button.on{background:linear-gradient(135deg,var(--a),var(--b));color:#2b1d3f;border-color:transparent}
 .hero{text-align:center;padding:20px 0 10px}
 .badge{display:inline-block;background:var(--card);border:1px dashed var(--b);color:var(--ink);border-radius:999px;padding:6px 16px;font-size:.85rem;font-weight:700;margin-bottom:14px}
-.hello{display:flex;align-items:center;justify-content:center;gap:20px;margin:8px auto 20px}.hello h1{text-align:left;margin:0;text-wrap:balance}
+.hello{display:flex;align-items:center;justify-content:center;gap:40px;margin:8px auto 34px}.hello h1{text-align:left;margin:0;text-wrap:balance}
+.hello .texto{max-width:500px}.hello .lead{text-align:left;margin:16px 0 0}
 h1 .tag{display:block;font-size:max(1.15rem,.52em);line-height:1.25;margin-top:.3em}
-.ventana{flex:none;position:relative;width:150px;height:150px;border-radius:18px;overflow:hidden;background:#1b1633;box-shadow:0 0 28px #b39bff66}
-.ventana img{position:absolute;display:block}.ventana .fondo,.ventana .marco{inset:0;width:100%;height:100%}
-.ventana .elara{width:84%;height:auto;left:8%;bottom:0}
-@media (max-width:560px){.hello{gap:14px}.ventana{width:104px;height:104px;border-radius:14px}}
+.ventana{flex:none;position:relative;width:340px;aspect-ratio:5/7;border-radius:26px;overflow:hidden;background:#1b1633;box-shadow:0 0 28px #b39bff66}
+.ventana img{position:absolute;display:block;inset:0;width:100%;height:100%}
+@media (max-width:760px){.hello{flex-direction:column;gap:22px}.ventana{width:min(300px,80vw)}.hello h1,.hello .lead{text-align:center}}
 h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.15;margin:.2em 0 .3em}
 h1 em{font-style:normal;background:linear-gradient(135deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font-size:1.15rem;color:var(--soft);max-width:680px;margin:0 auto 22px;text-wrap:balance}
@@ -45,11 +45,13 @@ footer{padding:30px 0 50px;text-align:center;color:var(--soft);font-size:.9rem}f
 <div class="hero">
   <div class="badge" data-l="en">🌱 Work in progress — not ready yet</div><div class="badge" data-l="es">🌱 En construcción — todavía no está lista</div>
   <div class="hello">
-    <div class="ventana"><img class="fondo" src="img/fondo-elara.svg" alt=""><img class="elara" src="img/elara_blink.webp" alt="Elara, my VTuber avatar" width="300" height="300"><img class="marco" src="img/marco-elara.svg" alt=""></div>
-    <div><h1 data-l="en">Meet <em>Elara</em>,<span class="tag">my own AI companion</span></h1><h1 data-l="es">Te presento a <em>Elara</em>,<span class="tag">mi propia compañera de&nbsp;IA</span></h1></div>
+    <div class="ventana"><img class="fondo" src="img/fondo-elara.svg" alt=""><img class="elara" src="img/elara_blink.webp" alt="Elara, my VTuber avatar" width="560" height="784"><img class="marco" src="img/marco-elara.svg" alt=""></div>
+    <div class="texto">
+      <h1 data-l="en">Meet <em>Elara</em>,<span class="tag">my own AI companion</span></h1><h1 data-l="es">Te presento a <em>Elara</em>,<span class="tag">mi propia compañera de&nbsp;IA</span></h1>
+      <p class="lead" data-l="en">My own version of Jarvis, but she is unique: she talks, she listens and she helps me every day. I built her because of my <b>autism and ADHD</b>. This is what she does so far.</p>
+      <p class="lead" data-l="es">Mi propia versión de Jarvis, pero única: habla, escucha y me ayuda cada día. La creé por mi <b>autismo y mi TDAH</b>. Esto es lo que hace hasta ahora.</p>
+    </div>
   </div>
-  <p class="lead" data-l="en">My own version of Jarvis, but she is unique: she talks, she listens and she helps me every day. I built her because of my <b>autism and ADHD</b>. This is what she does so far.</p>
-  <p class="lead" data-l="es">Mi propia versión de Jarvis, pero única: habla, escucha y me ayuda cada día. La creé por mi <b>autismo y mi TDAH</b>. Esto es lo que hace hasta ahora.</p>
   <canvas class="pueblo" id="pueblo" width="1796" height="1072" role="img" aria-label="Elara's village: six little dinosaurs, each one a helper on my team"></canvas>
   <noscript><img class="pueblo" src="img/pueblo.jpg" alt="Elara's village: six little dinosaurs, each one a helper on my team" width="1400" height="778"></noscript>
   <p><a class="btn" href="#waitlist" data-l="en">I'd like my own Elara</a><a class="btn" href="#waitlist" data-l="es">Quiero mi propia Elara</a></p>
