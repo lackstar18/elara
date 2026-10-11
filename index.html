@@ -2,6 +2,13 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Elara — my own AI companion</title>
 <meta name="description" content="Elara is an AI companion I built for my autism and ADHD. She talks, she listens, she helps. Not ready yet: join the waitlist if you would like your own.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://lackstar18.github.io/elara/">
+<meta property="og:title" content="Elara — my own AI companion">
+<meta property="og:description" content="An AI companion I built for my autism and ADHD. She talks, she listens, she helps. Join the waitlist if you would like your own.">
+<meta property="og:image" content="https://lackstar18.github.io/elara/img/pueblo.jpg"><meta property="og:image:width" content="1400"><meta property="og:image:height" content="778">
+<meta property="og:image:alt" content="Elara's village: six little dinosaurs, each one a helper on my team">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CozyElaraClub">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦕</text></svg>">
 <style>
 :root{--ink:#4b3358;--soft:#7a6488;--card:#fffafd;--line:#f0cfe3;--a:#a98bff;--b:#ff8fc4;--bg1:#ffe3f1;--bg2:#efe3ff}
 @media (prefers-color-scheme:dark){:root{--ink:#f6eaff;--soft:#cdb8e0;--card:#2a1f45;--line:#4a3a70;--bg1:#241a3d;--bg2:#1a1330}}
@@ -31,11 +38,14 @@ section{padding:46px 0}h2{font-size:clamp(1.5rem,4vw,2.1rem);margin:0 0 6px}.sub
 .card .ic{font-size:1.9rem}.card h3{margin:.3em 0 .2em;font-size:1.08rem}.card p{margin:0;color:var(--soft);font-size:.96rem}
 .soon{opacity:.92}.soon h3::after{content:" · soon";font-weight:500;color:var(--b);font-size:.8rem}
 .cta{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:34px 26px;text-align:center;box-shadow:0 7px 0 var(--line)}
-.cta .dinos{display:flex;justify-content:center;align-items:flex-end;gap:10px;margin-bottom:8px}.cta .dinos img{height:150px;width:auto;flex:none;object-fit:contain}
+.cta .dinos{display:flex;justify-content:center;align-items:flex-end;gap:10px;margin-bottom:8px}.cta .dinos img{width:min(30%,115px);height:auto;object-fit:contain}
 .small{font-size:.85rem;color:var(--soft);max-width:640px;margin:14px auto 0}
 .honest{background:var(--card);border-left:6px solid var(--b);border-radius:14px;padding:16px 20px;color:var(--soft)}
 footer{padding:30px 0 50px;text-align:center;color:var(--soft);font-size:.9rem}footer a{color:var(--ink);font-weight:700}
-[data-l]{display:none}body[data-lang="en"] [data-l="en"],body[data-lang="es"] [data-l="es"]{display:revert}
+body[data-lang="en"] [data-l="es"],body[data-lang="es"] [data-l="en"]{display:none}
+h2,h3,.sub,.small,footer p{text-wrap:balance}.card p,.honest p{text-wrap:pretty}
+.hello .arriba{margin:22px 0 0}
+@media (max-width:760px){.hello .arriba{text-align:center}}
 </style></head>
 <body data-lang="en">
 <div class="wrap">
@@ -45,16 +55,16 @@ footer{padding:30px 0 50px;text-align:center;color:var(--soft);font-size:.9rem}f
 <div class="hero">
   <div class="badge" data-l="en">🌱 Work in progress — not ready yet</div><div class="badge" data-l="es">🌱 En construcción — todavía no está lista</div>
   <div class="hello">
-    <div class="ventana"><img class="fondo" src="img/fondo-elara.svg" alt=""><img class="elara" src="img/elara_blink.webp" alt="Elara, my VTuber avatar" width="560" height="784"><img class="marco" src="img/marco-elara.svg" alt=""></div>
+    <div class="ventana"><img class="fondo" src="img/fondo-elara.svg" alt=""><img class="elara" src="img/elara_blink.webp" alt="Elara, my AI companion, blinking in her window" width="560" height="784"><img class="marco" src="img/marco-elara.svg" alt=""></div>
     <div class="texto">
       <h1 data-l="en">Meet <em>Elara</em>,<span class="tag">my own AI companion</span></h1><h1 data-l="es">Te presento a <em>Elara</em>,<span class="tag">mi propia compañera de&nbsp;IA</span></h1>
       <p class="lead" data-l="en">My own version of Jarvis, but she is unique: she talks, she listens and she helps me every day. I built her because of my <b>autism and ADHD</b>. This is what she does so far.</p>
       <p class="lead" data-l="es">Mi propia versión de Jarvis, pero única: habla, escucha y me ayuda cada día. La creé por mi <b>autismo y mi TDAH</b>. Esto es lo que hace hasta ahora.</p>
+      <p class="arriba"><a class="btn form" href="#waitlist" data-l="en">I'd like my own Elara</a><a class="btn form" href="#waitlist" data-l="es">Quiero mi propia Elara</a></p>
     </div>
   </div>
   <canvas class="pueblo" id="pueblo" width="1796" height="1072" role="img" aria-label="Elara's village: six little dinosaurs, each one a helper on my team"></canvas>
   <noscript><img class="pueblo" src="img/pueblo.jpg" alt="Elara's village: six little dinosaurs, each one a helper on my team" width="1400" height="778"></noscript>
-  <p><a class="btn" href="#waitlist" data-l="en">I'd like my own Elara</a><a class="btn" href="#waitlist" data-l="es">Quiero mi propia Elara</a></p>
 </div>
 
 <section>
@@ -74,9 +84,9 @@ footer{padding:30px 0 50px;text-align:center;color:var(--soft);font-size:.9rem}f
   <div class="cta">
     <div class="dinos"><img src="img/Rosy_walk.webp" alt="" width="147" height="191"><img src="img/Marine_walk.webp" alt="" width="147" height="191"><img src="img/Menta_walk.webp" alt="" width="147" height="191"></div>
     <h2 data-l="en">Would you like your own Elara?</h2><h2 data-l="es">¿Te gustaría tener tu propia Elara?</h2>
-    <p class="sub" data-l="en">Right now Elara lives only on my computer. I am exploring whether I can make a version for other people with autism, ADHD or similar needs. If that sounds useful, leave your email and I will tell you when there is news. Nothing to pay, no obligation.</p>
-    <p class="sub" data-l="es">Ahora mismo Elara vive solo en mi ordenador. Estoy estudiando si puedo hacer una versión para otras personas con autismo, TDAH u otras necesidades. Si te parece útil, deja tu correo y te aviso cuando haya novedades. Sin pagar nada y sin compromiso.</p>
-    <p><a class="btn" id="formBtn" href="#" data-l="en">Join the waitlist</a><a class="btn" id="formBtnEs" href="#" data-l="es">Apuntarme a la lista</a></p>
+    <p class="sub" data-l="en">Right now Elara lives only on my computer. I am exploring whether I can make a version for other people with autism, ADHD or similar needs. If that sounds useful, leave your email and I will tell you when there is news. Nothing to pay, no&nbsp;obligation.</p>
+    <p class="sub" data-l="es">Ahora mismo Elara vive solo en mi ordenador. Estoy estudiando si puedo hacer una versión para otras personas con autismo, TDAH u otras necesidades. Si te parece útil, deja tu correo y te aviso cuando haya novedades. Sin pagar nada y sin&nbsp;compromiso.</p>
+    <p><a class="btn form" id="formBtn" href="#" data-l="en">Join the waitlist</a><a class="btn form" id="formBtnEs" href="#" data-l="es">Apuntarme a la lista</a></p>
     <p class="small" data-l="en">I will only use your email to write to you about Elara. You can ask me to delete it at any time.</p>
     <p class="small" data-l="es">Usaré tu correo solo para escribirte sobre Elara. Puedes pedirme que lo borre cuando quieras.</p>
   </div>
@@ -84,8 +94,8 @@ footer{padding:30px 0 50px;text-align:center;color:var(--soft);font-size:.9rem}f
 
 <section>
   <div class="honest">
-    <p style="margin:0" data-l="en"><b>To be honest:</b> Elara is not a medical product and does not replace therapy or professional support. She is a tool that works for me, and I want to see if it can work for others. I will not promise a date until it is really ready.</p>
-    <p style="margin:0" data-l="es"><b>Siendo sincera:</b> Elara no es un producto médico y no sustituye a la terapia ni al apoyo profesional. Es una herramienta que a mí me funciona, y quiero ver si puede funcionar a otras personas. No prometo fecha hasta que esté de verdad lista.</p>
+    <p style="margin:0" data-l="en"><b>To be honest:</b> Elara is not a medical product and does not replace therapy or professional support. She is a tool that works for me, and I want to see if it can work for others. I will not promise a date until it is really&nbsp;ready.</p>
+    <p style="margin:0" data-l="es"><b>Siendo sincera:</b> Elara no es un producto médico y no sustituye a la terapia ni al apoyo profesional. Es una herramienta que a mí me funciona, y quiero ver si puede funcionar a otras personas. No prometo fecha hasta que esté de verdad&nbsp;lista.</p>
   </div>
 </section>
 
@@ -97,7 +107,10 @@ footer{padding:30px 0 50px;text-align:center;color:var(--soft);font-size:.9rem}f
 <script>
 // Cambia aquí el enlace de tu formulario (Tally, Google Forms…) y listo:
 const FORM_URL = "https://tally.so/r/jadlvE";
-document.querySelectorAll("#formBtn,#formBtnEs").forEach(a => { if(FORM_URL){ a.href = FORM_URL; a.target = "_blank"; a.rel = "noopener"; } else a.addEventListener("click", e => { e.preventDefault(); alert("Falta poner el enlace del formulario (FORM_URL) en este archivo."); }); });
+// ?ref=x (o pinterest, instagram…) en el enlace de un post pasa al formulario: así se sabe de qué red viene cada persona (en Tally, un campo oculto llamado «ref»)
+const REF = new URLSearchParams(location.search).get("ref");
+const FORM_REF = FORM_URL + (REF ? (FORM_URL.includes("?") ? "&" : "?") + "ref=" + encodeURIComponent(REF.slice(0, 40)) : "");
+document.querySelectorAll("a.btn.form").forEach(a => { if(FORM_URL){ a.href = FORM_REF; a.target = "_blank"; a.rel = "noopener"; } else a.addEventListener("click", e => { e.preventDefault(); alert("Falta poner el enlace del formulario (FORM_URL) en este archivo."); }); });
 const body = document.body;
 function setLang(l){ body.dataset.lang = l; document.documentElement.lang = l; document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.set === l)); try{ localStorage.setItem("lang", l); }catch(e){} }
 document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.set));
